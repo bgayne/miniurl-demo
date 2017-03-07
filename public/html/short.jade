@@ -1,0 +1,17 @@
+//output:short.html
+
+html
+  head
+    script(src="/js/clipboard.min.js")
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="/js/short.js")
+    link(href="/css/short.min.css" rel="stylesheet")
+  body
+    nav
+      {{{navbar}}}
+    div.main-body
+      h1.title MiniURL
+      div.input
+        input(type="text").url-text
+        button.submit-button Shorten
+      input(type="text" data-clipboard-action="copy" data-clipboard-target=".output" readOnly="true").output

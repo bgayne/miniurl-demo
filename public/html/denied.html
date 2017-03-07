@@ -1,0 +1,21 @@
+
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/js/denied.js"></script>
+    <link href="/css/denied.min.css" rel="stylesheet"/>
+    <title>Link Access Denied</title>
+  </head>
+  <body>
+    <redirect id="{{deniedid}}"></redirect>
+    <nav>{{{navbar}}}</nav>
+    <div class="body-main">
+      <h1>Access to {{deniedid}} denied. </h1>
+      <h2>Please enter the correct password.</h2>
+      <div>
+        <input type="text" placeholder="password" class="pass"/>
+        <button class="submit">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

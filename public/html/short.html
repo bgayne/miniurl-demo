@@ -1,0 +1,20 @@
+
+<html>
+  <head>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/js/short.js"></script>
+    <link href="/css/short.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav>{{{navbar}}}</nav>
+    <div class="main-body">
+      <h1 class="title">MiniURL</h1>
+      <div class="input">
+        <input type="text" class="url-text"/>
+        <button class="submit-button">Shorten</button>
+      </div>
+      <input type="text" data-clipboard-action="copy" data-clipboard-target=".output" readOnly="true" class="output"/>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+//output:user.html
+html
+  head
+    script(src="/js/clipboard.min.js")
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="/js/user.js")
+    link(href="/css/user.min.css" rel="stylesheet")
+  body
+    nav
+      {{{navbar}}}
+    div.main-body
+      div.userpanel
+        div.userpanel-header
+        div.panel-panes
+          div.panel-column-left.outline
+            p.username {{uname}}
+            ul.user-actions
+              li.nav-option#private-link Private Links
+              li.nav-option#link-log Link Logs
+              li.nav-option#settings Settings
+          div.panel-column-right
+            div.private-link.panel-item.outline.hidden
+              div.pl-row
+                input(type="text" placeholder="new private link").pl-input#pl-url
+                input(type="password" placeholder="password for this link").pl-input#pl-password
+              div.pl-row
+                input(type="text" data-clipboard-action="copy" data-clipboard-target="#pl-output" readOnly="true")#pl-output
+              div.pl-row
+                div.pl-button#pl-submit submit
+              div.pl-list.outline
+                div.link-log-item
+                  div.link-log-target
+                    p.link-log-target-text Target
+                  div.link-log-hash
+                    p.link-log-hash-text Link
+            div.link-log.outline.panel-item.hidden
+              div.link-log-item
+                div.link-log-target
+                  p.link-log-target-text Target
+                div.link-log-hash
+                  p.link-log-hash-text Link

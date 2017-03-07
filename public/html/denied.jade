@@ -1,0 +1,20 @@
+//output:denied.html
+html
+  head
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="/js/denied.js")
+    link(href="/css/denied.min.css" rel="stylesheet")
+    title Link Access Denied
+  body
+    redirect(id="{{deniedid}}")
+    nav
+      {{{navbar}}}
+    div.body-main
+      h1 Access to {{deniedid}} denied. 
+      h2 Please enter the correct password.
+      div
+        input(type="text" placeholder="password").pass
+        button.submit Submit
+      
+      
+      

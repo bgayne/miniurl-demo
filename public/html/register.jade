@@ -1,0 +1,17 @@
+//output:register.html
+
+html
+  head
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="/js/register.js")
+    link(href="/css/register.min.css" rel="stylesheet")
+    title Register Your MiniURL Account
+  body
+    div.reg-form
+      input(type="text" placeholder="username").form-object#username
+      input(type="text" placeholder="password").form-object#password
+      input(type="text" placeholder="confirm password").form-object#confirm
+      input(type="text" placeholder="email").form-object#email
+      div.form-object#submit submit
+      div.error-message-container
+        p.error-message

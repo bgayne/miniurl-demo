@@ -1,0 +1,61 @@
+
+<html>
+  <head>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="/js/user.js"></script>
+    <link href="/css/user.min.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <nav>{{{navbar}}}</nav>
+    <div class="main-body">
+      <div class="userpanel">
+        <div class="userpanel-header"></div>
+        <div class="panel-panes">
+          <div class="panel-column-left outline">
+            <p class="username">{{uname}}</p>
+            <ul class="user-actions">
+              <li id="private-link" class="nav-option">Private Links</li>
+              <li id="link-log" class="nav-option">Link Logs</li>
+              <li id="settings" class="nav-option">Settings</li>
+            </ul>
+          </div>
+          <div class="panel-column-right">
+            <div class="private-link panel-item outline hidden">
+              <div class="pl-row">
+                <input type="text" placeholder="new private link" id="pl-url" class="pl-input"/>
+                <input type="password" placeholder="password for this link" id="pl-password" class="pl-input"/>
+              </div>
+              <div class="pl-row">
+                <input type="text" data-clipboard-action="copy" data-clipboard-target="#pl-output" readOnly="true" id="pl-output"/>
+              </div>
+              <div class="pl-row">
+                <div id="pl-submit" class="pl-button">submit</div>
+              </div>
+              <div class="pl-list outline">
+                <div class="link-log-item">
+                  <div class="link-log-target">
+                    <p class="link-log-target-text">Target</p>
+                  </div>
+                  <div class="link-log-hash">
+                    <p class="link-log-hash-text">Link</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="link-log outline panel-item hidden">
+              <div class="link-log-item">
+                <div class="link-log-target">
+                  <p class="link-log-target-text">Target</p>
+                </div>
+                <div class="link-log-hash">
+                  <p class="link-log-hash-text">Link</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
